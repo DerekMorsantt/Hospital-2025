@@ -25,5 +25,6 @@ public class Main {
         bannerPanel panelBanner = new bannerPanel();
         miVentana.add(panelBanner.getBanner(), BorderLayout.WEST);
 
+        
     }
 }

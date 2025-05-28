@@ -4,7 +4,9 @@ import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.event.*;
 
+import ventanas.*;
 
 
 public class loginPanel {
@@ -61,6 +63,18 @@ public class loginPanel {
         gbc.anchor = GridBagConstraints.EAST;
         gbc.fill = GridBagConstraints.NONE;
         loginPanel.add(boton, gbc);
+
+boton.addActionListener(new ActionListener(){
+    @Override
+    public void actionPerformed(ActionEvent e){
+        // Crea y muestra el Dashboard
+        new Dashboard();
+        
+        // Cierra directamente la ventana actual (login)
+        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(loginPanel);
+        frame.dispose();
+    }
+});
     }
 
     public JPanel getPanel() {
