@@ -1,7 +1,4 @@
 import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-
 import javax.swing.*;
 
 import vistas.bannerPanel;
@@ -25,6 +22,5 @@ public class Main {
         bannerPanel panelBanner = new bannerPanel();
         miVentana.add(panelBanner.getBanner(), BorderLayout.WEST);
 
-        
     }
 }

@@ -7,6 +7,7 @@ import java.awt.Insets;
 import java.awt.event.*;
 
 import ventanas.*;
+import control.loginControl;
 
 
 public class loginPanel {
@@ -43,7 +44,7 @@ public class loginPanel {
         gbc.gridy = 1;
         gbc.gridwidth = 3;  
         gbc.weightx = 1.0;
-        entradaCorreo.setText("Usuario");
+        entradaCorreo.setText("");
         loginPanel.add(entradaCorreo, gbc);
 
         // Entrada contrasenna
@@ -53,7 +54,7 @@ public class loginPanel {
         gbc.gridx = 1;
         gbc.gridy = 2;
         gbc.gridwidth = 3;
-        entradaContrasenna.setText("Contrasenna");
+        entradaContrasenna.setText("");
         loginPanel.add(entradaContrasenna, gbc);
 
         // Boton 
@@ -64,15 +65,20 @@ public class loginPanel {
         gbc.fill = GridBagConstraints.NONE;
         loginPanel.add(boton, gbc);
 
+
 boton.addActionListener(new ActionListener(){
     @Override
     public void actionPerformed(ActionEvent e){
-        // Crea y muestra el Dashboard
-        new Dashboard();
         
-        // Cierra directamente la ventana actual (login)
-        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(loginPanel);
-        frame.dispose();
+            String entradaUsuario =entradaCorreo.getText();
+            String entradaContra=entradaContrasenna.getText();
+         
+        if (new loginControl().validacionDatos(entradaUsuario, entradaContra)) {
+            new Dashboard();
+            JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(loginPanel);
+            frame.dispose();
+        }
+ 
     }
 });
     }
