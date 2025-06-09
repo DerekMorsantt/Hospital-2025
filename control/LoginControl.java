@@ -1,6 +1,6 @@
 package control;
 
-public class loginControl {
+public class LoginControl {
     
     String[][] datos = {
         {"drmorales", "1234"},{"jlopez", "abcd"},{"amartinez", "pass2025"},

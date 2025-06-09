@@ -1,0 +1,60 @@
+package data;
+
+public class Pacientes {
+    
+ private Object[][] datos = {
+    {1, "Ana", 20},
+    {2, "Luis", 22},
+    {3, "María", 19},
+    {4, "Carlos", 23},
+    {5, "Sofía", 21},
+    {6, "Miguel", 24},
+    {7, "Laura", 20},
+    {8, "Pedro", 22},
+    {9, "Elena", 19},
+    {10, "Andrés", 21},
+    {11, "Valeria", 23},
+    {12, "Jorge", 18},
+    {13, "Lucía", 25},
+    {14, "Ricardo", 22},
+    {15, "Camila", 19},
+    {16, "Mateo", 21},
+    {17, "Paula", 20},
+    {18, "Diego", 24},
+    {19, "Isabela", 18},
+    {20, "Fernando", 23},
+    {21, "Gabriela", 22},
+    {22, "Tomás", 20},
+    {23, "Renata", 21},
+    {24, "Sebastián", 25},
+    {25, "Daniela", 19},
+    {26, "Iván", 23},
+    {27, "Marina", 22},
+    {28, "Oscar", 21},
+    {29, "Julia", 18},
+    {30, "Axel", 20},
+    {31, "Bianca", 24},
+    {32, "Hugo", 22},
+    {33, "Eva", 23},
+    {34, "Samuel", 19},
+    {35, "Martina", 21},
+    {36, "Raúl", 25},
+    {37, "Ariana", 18},
+    {38, "Leandro", 20},
+    {39, "Carla", 24},
+    {40, "Alonso", 22},
+    {41, "Florencia", 19},
+    {42, "Marco", 23},
+    {43, "Lola", 21},
+    {44, "Agustín", 20},
+    {45, "Verónica", 25},
+    {46, "Esteban", 22},
+    {47, "Clara", 18},
+    {48, "Santiago", 24},
+    {49, "Mía", 19},
+    {50, "Emiliano", 21}
+};
+    public Object[][] getDatos() {
+        return datos;
+    }
+}

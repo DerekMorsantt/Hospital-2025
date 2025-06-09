@@ -1,6 +1,10 @@
 package ventanas;
 
+import java.awt.BorderLayout;
+
 import javax.swing.JFrame;
+
+import paneles.MenuLateralPanel;
 
 public class Dashboard extends JFrame {
     
@@ -8,11 +12,12 @@ public class Dashboard extends JFrame {
         setTitle("Doctor");
         setSize(1900, 1000);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        setLayout(null); // Layout nulo para posicionar manualmente
-        
+        this.setLayout(new BorderLayout());
+
+        this.add(new MenuLateralPanel().getPanel(),BorderLayout.EAST);
         // Crear e integrar la tabla
         Tabla tabla = new Tabla();
-        add(tabla); // Agregar directamente al JFrame
+        this.add(tabla, BorderLayout.EAST); // Agregar directamente al JFrame
         
         setVisible(true);
     }

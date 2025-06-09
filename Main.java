@@ -1,8 +1,8 @@
 import java.awt.BorderLayout;
 import javax.swing.*;
 
-import vistas.bannerPanel;
-import vistas.loginPanel;
+import paneles.BannerPanel;
+import paneles.LoginPanel;
 public class Main {
 
     public static void main(String[] args) {
@@ -13,13 +13,14 @@ public class Main {
         miVentana.setSize(1000, 800); 
         miVentana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         miVentana.setLayout(new BorderLayout());
+        miVentana.setLocationRelativeTo(null);
 
-        loginPanel loginPanel = new loginPanel();
+        LoginPanel loginPanel = new LoginPanel();
         miVentana.add(loginPanel.getPanel(), BorderLayout.CENTER);
 
         miVentana.setVisible(true);
 
-        bannerPanel panelBanner = new bannerPanel();
+        BannerPanel panelBanner = new BannerPanel();
         miVentana.add(panelBanner.getBanner(), BorderLayout.WEST);
 
     }

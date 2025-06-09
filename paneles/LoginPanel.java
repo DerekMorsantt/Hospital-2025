@@ -1,4 +1,4 @@
-package vistas;
+package paneles;
 import javax.swing.*;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
@@ -7,13 +7,13 @@ import java.awt.Insets;
 import java.awt.event.*;
 
 import ventanas.*;
-import control.loginControl;
+import control.LoginControl;
 
 
-public class loginPanel {
+public class LoginPanel {
     private JPanel loginPanel;
 
-    public loginPanel() {
+    public LoginPanel() {
         loginPanel = new JPanel();
         loginPanel.setSize(500, 800);
         loginPanel.setOpaque(true);
@@ -73,7 +73,7 @@ boton.addActionListener(new ActionListener(){
             String entradaUsuario =entradaCorreo.getText();
             String entradaContra=entradaContrasenna.getText();
          
-        if (new loginControl().validacionDatos(entradaUsuario, entradaContra)) {
+        if (new LoginControl().validacionDatos(entradaUsuario, entradaContra)) {
             new Dashboard();
             JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(loginPanel);
             frame.dispose();
