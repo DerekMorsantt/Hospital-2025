@@ -18,7 +18,7 @@ public class HeaderPanel extends JPanel {
        
         
        
- JLabel vista = new JLabel("Doctor Dashboard");
+ JLabel vista = new JLabel("Hospital: Pacientes");
         vista.setFont(largeFont);
         vista.setForeground(Color.BLACK);
         gbc.gridx = 0;
