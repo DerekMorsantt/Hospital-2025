@@ -11,7 +11,7 @@ public class Tabla extends JScrollPane {  // Ahora es un componente JScrollPane
 
     public Tabla() {
         // Columnas y datos
-        String[] columnas = {"ID", "Nombre", "Edad"};
+        String[] columnas = {"ID del paciente", "Nombre del paciente", "Edad"};
         Object[][] datos = new Pacientes().getDatos();
 
         // Crear modelo y tabla
@@ -21,5 +21,6 @@ public class Tabla extends JScrollPane {  // Ahora es un componente JScrollPane
         // Configurar este JScrollPane para contener la tabla
         this.setViewportView(table);
         this.setPreferredSize(new Dimension(1600,1000));
+        
     }
 }
