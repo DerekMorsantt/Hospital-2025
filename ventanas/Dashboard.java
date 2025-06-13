@@ -27,7 +27,7 @@ public class Dashboard extends JFrame {
         layoutCentral = new CardLayout();
         contenedorCentral = new JPanel(layoutCentral);
 
-        Tabla tablaPacientes = new Tabla(); 
+        TablaPanel tablaPacientes = new TablaPanel(); 
         JPanel historialPanel = new JPanel(); 
 
         contenedorCentral.add(tablaPacientes, "PACIENTES");
