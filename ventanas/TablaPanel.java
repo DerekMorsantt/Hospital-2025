@@ -7,9 +7,9 @@ import javax.swing.table.DefaultTableModel;
 
 import data.Pacientes;
 
-public class Tabla extends JScrollPane {  // Ahora es un componente JScrollPane
+public class TablaPanel extends JScrollPane {  // Ahora es un componente JScrollPane
 
-    public Tabla() {
+    public TablaPanel() {
         // Columnas y datos
         String[] columnas = {"ID del paciente", "Nombre del paciente", "Edad"};
         Object[][] datos = new Pacientes().getDatos();
