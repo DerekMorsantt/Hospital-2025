@@ -29,9 +29,24 @@ public class Dashboard extends JFrame {
 
         TablaPanel tablaPacientes = new TablaPanel(); 
         JPanel historialPanel = new JPanel(); 
+        JPanel agendarPanel = new JPanel();
+        agendarPanel.add(new javax.swing.JLabel("Aquí va el panel de agendar"));
+
+        JPanel farmaciaPanel = new JPanel();
+        farmaciaPanel.add(new javax.swing.JLabel("Aquí va el panel de farmacia"));
+
+        JPanel examenesPanel = new JPanel();
+        examenesPanel.add(new javax.swing.JLabel("Aquí va el panel de exámenes"));
+
+        JPanel residenciaPanel = new JPanel();
+        residenciaPanel.add(new javax.swing.JLabel("Aquí va el panel de residencia"));
 
         contenedorCentral.add(tablaPacientes, "PACIENTES");
         contenedorCentral.add(historialPanel, "HISTORIAL");
+        contenedorCentral.add(agendarPanel, "AGENDAR");
+        contenedorCentral.add(farmaciaPanel, "FARMACIA");
+        contenedorCentral.add(examenesPanel, "EXAMENES");
+        contenedorCentral.add(residenciaPanel, "RESIDENCIA");
 
         this.add(contenedorCentral, BorderLayout.CENTER);
 
