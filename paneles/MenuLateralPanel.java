@@ -43,22 +43,18 @@ public class MenuLateralPanel extends JPanel {
         btnAgendar.setFont(new Font("Arial", Font.PLAIN, 16));
         this.add(btnAgendar, gbc);
 
+
         gbc.gridy = 3;
         btnFarmacia = new JButton("Farmacia");
         btnFarmacia.setFont(new Font("Arial", Font.PLAIN, 16));
         this.add(btnFarmacia, gbc);
 
         gbc.gridy = 4;
-        btnFarmacia = new JButton("Farmacia");
-        btnFarmacia.setFont(new Font("Arial", Font.PLAIN, 16));
-        this.add(btnFarmacia, gbc);
-
-        gbc.gridy = 5;
         btnExamenes = new JButton("Examenes");
         btnExamenes.setFont(new Font("Arial", Font.PLAIN, 16));
         this.add(btnExamenes, gbc);
 
-        gbc.gridy = 6;
+        gbc.gridy = 5;
         btnResidencia = new JButton("Residencia");
         btnResidencia.setFont(new Font("Arial", Font.PLAIN, 16));
         this.add(btnResidencia, gbc);
@@ -74,5 +70,22 @@ public class MenuLateralPanel extends JPanel {
 
     public JButton getBtnPacientes() {
         return btnPacientes;
-    }
+ }
+
+ public JButton getBtnExamenes(){
+    return btnExamenes;
+ }
+
+ public JButton getBtnAgendar() {
+    return btnAgendar;
+}
+
+public JButton getBtnFarmacia() {
+    return btnFarmacia;
+}
+
+public JButton getBtnResidencia() {
+    return btnResidencia;
+}
+
 }
