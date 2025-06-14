@@ -15,6 +15,6 @@ public class LoginControl {
                 return true; // Coincidencia encontrada, acceso permitido
             }
         }
-        return true; // No se encontró ninguna coincidencia
+        return false; // No se encontró ninguna coincidencia
     }
 }
