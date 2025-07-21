@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import paneles.HeaderPanel;
+import paneles.Medicamentos;
 import paneles.MenuLateralPanel;
 
 import data.Pacientes;
@@ -80,16 +81,19 @@ public class Dashboard extends JFrame {
         };
         TablaPanel tablaExamenes = new TablaPanel(columnasExamenes, datosExamenes);
 
-        // Tabla residencia
-        String[] columnasResidencia = {"Residente", "Especialidad", "Año"};
-        Object[][] datosResidencia = {
-            {"Valeria", "Pediatría", 2},
-            {"Jorge", "Medicina Interna", 1},
+      
+
+          String[] columnasMedicamentos = {"Residente", "Especialidad", "Año"};
+        Object[][] datosMedicamentos = {
+            {"Valeria", "Pediañlksfñlkjdskñftría", 2},
+            {"Jorge", "Medskjflkdsfna Interna", 1},
             {"Lucía", "Cardiología", 3},
             {"Iván", "Dermatología", 1},
             {"Camila", "Ginecología", 2}
         };
-        TablaPanel tablaResidencia = new TablaPanel(columnasResidencia, datosResidencia);
+       Medicamentos tablaMedicamentos = new Medicamentos(columnasMedicamentos, datosMedicamentos);
+
+        
 
         // Añadir tablas al contenedor central
         contenedorCentral.add(tablaPacientes, "PACIENTES");
@@ -97,7 +101,7 @@ public class Dashboard extends JFrame {
         contenedorCentral.add(tablaAgendar, "AGENDAR");
         contenedorCentral.add(tablaFarmacia, "FARMACIA");
         contenedorCentral.add(tablaExamenes, "EXAMENES");
-        contenedorCentral.add(tablaResidencia, "RESIDENCIA");
+        contenedorCentral.add(tablaMedicamentos, "MEDICAMENTOS");
 
         this.add(contenedorCentral, BorderLayout.CENTER);
 
@@ -107,7 +111,7 @@ public class Dashboard extends JFrame {
         menu.getBtnAgendar().addActionListener(e -> layoutCentral.show(contenedorCentral, "AGENDAR"));
         menu.getBtnFarmacia().addActionListener(e -> layoutCentral.show(contenedorCentral, "FARMACIA"));
         menu.getBtnExamenes().addActionListener(e -> layoutCentral.show(contenedorCentral, "EXAMENES"));
-        menu.getBtnResidencia().addActionListener(e -> layoutCentral.show(contenedorCentral, "RESIDENCIA"));
+        menu.getBtnMedicamentos().addActionListener(e -> layoutCentral.show(contenedorCentral, "MEDICAMENTOS"));
 
         setVisible(true);
     }
